@@ -1,30 +1,13 @@
 # PhantomPath
 
-A small WAI/Warp server that generates deterministic synthetic HTML pages and recursive links based on the request path and user-agent. Useful for controlled crawler tests or synthetic traffic experiments.
+PhantomPath is a minimal WAI/Warp server that generates deterministic synthetic HTML pages.
 
-## Build
+- Each page includes a generated title, body, and a few recursive links.
+- Output depends only on the request path and user-agent.
+- Known search engine bots receive a simple static page.
+- No storage or external state is used.
 
-Run the following command to compile:
-
-```bash
-ghc -O2 PhantomPath.hs
-```
-
-## Run
-
-After building, run:
-
-```bash
-./PhantomPath
-```
-
-The server listens on `0.0.0.0:8080`.
-
-## Notes
-
-- No storage or state; output depends only on path and user-agent.
-- Known bots receive a simple static page.
-- Other requests get generated content and recursive links.
+Useful for experiments, testing crawlers, or generating predictable synthetic pages.
 
 ## License
 
