@@ -8,7 +8,3 @@ PhantomPath is a minimal WAI/Warp server that generates deterministic synthetic 
 - No storage or external state is used.
 
 Useful for experiments, testing crawlers, or generating predictable synthetic pages.
-
-## License
-
-MIT
