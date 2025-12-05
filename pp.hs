@@ -1,8 +1,17 @@
 {-# LANGUAGE OverloadedStrings #-}
 
 -- | PhantomPath
--- A minimal WAI/Warp server generating deterministic synthetic HTML pages
--- with recursive links based on request path and user-agent.
+-- A minimal WAI/Warp server that generates deterministic synthetic HTML pages.
+-- 
+-- Each request produces a page with:
+--   * a generated title
+--   * a generated body
+--   * a small set of recursive links
+--
+-- All output depends only on the request path and user-agent.
+-- Known search-engine bots receive a simple benign page.
+-- No storage or external state is used.
+
 module Main (main) where
 
 import Control.Concurrent       (threadDelay)
